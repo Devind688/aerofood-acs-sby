@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Engineering Aerofood ACS Surabaya</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body class="login-page">
+  <div class="login-container">
+    <h2>Masuk ke Portal</h2>
+    
+    <form id="loginForm">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Masukkan email" required>
+
+      <label for="password">Kata sandi</label>
+      <input type="password" id="password" placeholder="Masukkan kata sandi" required>
+
+      <label>
+        <input type="checkbox" id="rememberMe"> Remember me
+      </label>
+
+      <button type="submit">Masuk</button>
+    </form>
+
+    <div class="divider">atau</div>
+
+    <!-- Tombol Login Gmail -->
+    <div id="g_id_onload"
+         data-client_id="192273090979-sbm84v20vucavb8de0gf0vc2luaarker.apps.googleusercontent.com"
+         data-login_uri="https://devind688.github.io/aerofood-acs-sby/index.html"
+         data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
+
+    <p>Belum punya akun? <a href="signup.html">Daftar di sini</a></p>
+  </div>
+</body>
+</html>
