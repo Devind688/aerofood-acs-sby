@@ -4,38 +4,159 @@
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="wP-Bhy5Uy5WXv2t70KXnw1-o4-WCeuI9CbqxDbej3Z0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal resmi Divisi Engineering & Housekeeping PT Aerofood ACS Surabaya.">
+  <meta name="keywords" content="Aerofood, ACS, Engineering, Housekeeping, Surabaya, Garuda Indonesia, PKL UNY">
+  <meta name="author" content="David Evin Dewantara">
   <title>Engineering Aerofood ACS Surabaya</title>
+  
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Lora:wght@400;700&family=Gentium+Basic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  
+  <style>
+    /* --- FOOTER STYLING --- */
+    footer {
+      background: linear-gradient(180deg, #111 0%, #222 100%);
+      color: #fff;
+      padding: 2rem 3rem;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-column h3 {
+      font-family: "Gentium Basic", serif;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-column p,
+    .footer-column a,
+    .footer-column li {
+      color: #fff;
+      font-size: 12px;
+      font-family: "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    .footer-column a {
+      text-decoration: underline;
+    }
+
+    .footer-column ul {
+      list-style-type: disc;
+      margin-left: 1.2rem;
+    }
+
+    .footer-logos {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .footer-logos img {
+      height: 40px;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 4px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      background-color: #f9f9f9;
+      color: #666666;
+      text-align: left;
+      padding: 1.5rem 3rem;
+      font-size: 12px;
+      font-family: "Open Sans", sans-serif;
+    }
+  </style>
 </head>
 <body>
   <nav class="sidebar">
     <h2>Engineering<br>Aerofood ACS<br>Surabaya</h2>
     <ul>
-      <li><a href="index.html">Beranda</a></li>
+      <li><a class="active" href="index.html">Beranda</a></li>
       <li><a href="kegiatan-divisi.html">Kegiatan Divisi</a></li>
       <li><a href="tentang-kami.html">Tentang Kami</a></li>
       <li><a href="tentang-website.html">Tentang Website</a></li>
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     </ul>
   </nav>
 
   <main>
     <section class="hero">
       <h1>Selamat Datang di Portal Divisi Engineering & Housekeeping</h1>
+      <p>Website ini memuat profil, kegiatan, dan informasi tentang Divisi Engineering & Housekeeping PT Aerofood ACS Surabaya.</p>
     </section>
 
     <section class="content">
       <h2>Video Profil</h2>
       <iframe width="560" height="315"
         src="https://www.youtube.com/embed/qJElPB69mQQ"
-        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        title="Video Profil Aerofood ACS Surabaya"
+        frameborder="0" allowfullscreen></iframe>
     </section>
   </main>
 
+  <!-- === FOOTER BARU === -->
   <footer>
-    <p>© 2025 PT Aerofood ACS Surabaya – Engineering & Housekeeping Division</p>
+    <div class="footer-container">
+      <!-- Kolom Kiri -->
+      <div class="footer-column">
+        <h3>Bagaimana kami membantu anda?</h3>
+        <p style="font-family: 'Gentium Basic', serif; font-size: 10px;">(Whatsapp only)</p>
+        <p>Basoni (0813-3953-0869)</p>
+        <p>Sonny Agung (0896-16161-1383)</p>
+      </div>
+
+      <!-- Kolom Tengah -->
+      <div class="footer-column">
+        <h3 style="font-family:'Times New Roman'; font-size:14px; font-weight:bold;">Email</h3>
+        <ul>
+          <li><a href="mailto:engineeringacssub@gmail.com">engineeringacssub@gmail.com</a></li>
+          <li><a href="mailto:suballeng@aerowisatafood.com">suballeng@aerowisatafood.com</a></li>
+        </ul>
+
+        <h3 style="margin-top:1rem; font-family:'Lora'; font-size:11px; font-weight:bold;">Ingin Magang Industri (PKL) di PT Aerofood ACS Surabaya?</h3>
+        <p style="font-family:'Lora'; font-size:11px;">+62 823-3843-8588</p>
+      </div>
+
+      <!-- Kolom Kanan -->
+      <div class="footer-column">
+        <h3 style="font-family:'Lora'; font-size:11px; font-weight:bold;">Terhubung dengan Kami</h3>
+        <p><a href="https://aerowisatafood.com/" target="_blank">https://aerowisatafood.com/</a></p>
+
+        <h3 style="margin-top:1rem; font-family:'Arial'; font-size:12px;">Jam Kerja: Senin - Jumat 08.00 - 16.00 WIB | Sabtu 08.00 - 12.00 WIB</h3>
+      </div>
+    </div>
+
+    <!-- Logo -->
+    <div class="footer-logos">
+      <img src="images/logo-aerofood.png" alt="Logo Aerofood ACS">
+      <img src="images/logo-garuda.png" alt="Logo Garuda Indonesia">
+    </div>
   </footer>
+
+  <!-- === BAGIAN ABU-ABU BAWAH === -->
+  <div class="footer-bottom">
+    <p>© 2025 PT Aerofood ACS Surabaya – Engineering & Housekeeping Division. All Rights Reserved.</p>
+    <p>All materials on this site are confidential and intended only for internal documentation. Unauthorized copying or capture of content is prohibited.</p>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
 </html>
+
