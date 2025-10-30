@@ -12,9 +12,8 @@
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Lora:wght@400;700&family=Gentium+Basic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  
+
   <style>
-    /* --- FOOTER STYLING --- */
     footer {
       background: linear-gradient(180deg, #111 0%, #222 100%);
       color: #fff;
@@ -109,12 +108,84 @@
         title="Video Profil Aerofood ACS Surabaya"
         frameborder="0" allowfullscreen></iframe>
     </section>
+
+    <!-- ====== FAQ + MAP ====== -->
+    <section style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px; margin-top:60px;">
+      <!-- Peta Lokasi -->
+      <div style="flex:1; min-width:300px; max-width:450px;">
+        <h3 style="font-family:'Lora',serif; font-size:22px; color:#003366; text-align:center;">📍 Lokasi Perusahaan</h3>
+        <iframe src="https://www.google.com/maps?ll=-7.382693,112.752984&z=18&t=m&hl=id&gl=US&mapclient=embed&q=7°22%2758.6%22S+112°45%2709.6%22E+-7.382945,+112.752672@-7.382944999999999,112.752672" 
+          width="100%" height="300" style="border:1px solid #ccc; border-radius:10px;" allowfullscreen loading="lazy"></iframe>
+        <p style="font-family:'Times New Roman',serif; font-size:13px; margin-top:10px; text-align:left;">
+          Jalan Raya Bandara Juanda Waru KM 4, Sedati Kulon 61253,  
+          Wedi, Sidoarjo, Kabupaten Sidoarjo, Jawa Timur.
+        </p>
+      </div>
+
+      <!-- FAQ -->
+      <div style="flex:1; min-width:400px; max-width:700px;">
+        <h2 style="text-align:center; font-size:26px; color:#003366;">Pertanyaan Umum (FAQ)</h2>
+        <div class="faq-container" style="border-top:2px solid #003366;">
+          <style>
+            .faq-item {border-bottom:1px solid #ddd; padding:14px 0;}
+            .faq-question {font-weight:600; font-size:16px; cursor:pointer; position:relative; padding-right:25px;}
+            .faq-question::after {content:"+"; position:absolute; right:0; transition:transform 0.2s;}
+            .faq-item.active .faq-question::after {content:"–"; transform:rotate(180deg);}
+            .faq-answer {display:none; margin-top:8px; color:#444; line-height:1.5;}
+            .faq-item.active .faq-answer {display:block;}
+          </style>
+
+          <div class="faq-item"><div class="faq-question">1. Apa saja layanan yang ditangani oleh Divisi Engineering & Housekeeping?</div><div class="faq-answer">Divisi Engineering bertanggung jawab pada pemeliharaan fasilitas, sistem kelistrikan, tata udara (HVAC), air bersih, air limbah, dan peralatan utilitas. Sedangkan Housekeeping berfokus pada kebersihan area produksi, sanitasi, pengelolaan limbah, serta pengendalian hama (pest control).</div></div>
+          <div class="faq-item"><div class="faq-question">2. Apakah layanan Engineering & Housekeeping dapat mendukung kebutuhan khusus pelanggan?</div><div class="faq-answer">Ya, tim Engineering & Housekeeping mampu menyesuaikan layanan sesuai standar operasional yang berlaku di area tersebut.</div></div>
+          <div class="faq-item"><div class="faq-question">3. Bagaimana standar kebersihan dan sanitasi yang diterapkan?</div><div class="faq-answer">Seluruh kegiatan mengikuti standar internasional HACCP, ISO 22000, dan prosedur internal Garuda Indonesia Group.</div></div>
+          <div class="faq-item"><div class="faq-question">4. Bagaimana sistem pemeliharaan peralatan dilakukan?</div><div class="faq-answer">Pemeliharaan dilakukan secara preventive dan corrective maintenance dengan pencatatan laporan digital.</div></div>
+          <div class="faq-item"><div class="faq-question">5. Apakah pihak luar dapat melakukan kunjungan fasilitas?</div><div class="faq-answer">Ya, dengan izin resmi dari pihak manajemen dan HRD, serta mengikuti prosedur K3 dan keamanan internal.</div></div>
+          <div class="faq-item"><div class="faq-question">6. Bagaimana mekanisme kerja sama pihak luar?</div><div class="faq-answer">Melalui surat resmi atau proposal kepada manajemen PT Aerofood ACS Surabaya untuk dijadwalkan pertemuan teknis.</div></div>
+          <div class="faq-item"><div class="faq-question">7. Siapa yang dapat dihubungi untuk koordinasi teknis?</div><div class="faq-answer">Koordinasi dilakukan melalui Manager Divisi Engineering & Housekeeping dengan dukungan tim lapangan.</div></div>
+          <div class="faq-item"><div class="faq-question">8. Apakah ada dukungan untuk pengelolaan limbah dan efisiensi energi?</div><div class="faq-answer">Ya, tim Engineering memantau penggunaan energi dan air serta mengelola limbah sesuai program sustainability.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const items = document.querySelectorAll('.faq-item');
+        items.forEach(item => {
+          item.querySelector('.faq-question').addEventListener('click', () => {
+            item.classList.toggle('active');
+          });
+        });
+      });
+    </script>
+
+    <!-- ====== DISKUSI & PERTANYAAN ====== -->
+    <div style="background:#f8f9fa; border:1px solid #ccc; border-radius:10px; padding:25px; max-width:700px; margin:60px auto; font-family:'Segoe UI',sans-serif;">
+      <h3 style="color:#006241;">💬 Diskusi & Pertanyaan</h3>
+      <p style="font-size:14px; color:#555;">Sampaikan pertanyaan atau komentar Anda di bawah ini.<br><b>Tim Divisi Engineering & Housekeeping akan menanggapi komentar yang relevan.</b></p>
+      <form id="commentForm">
+        <input type="text" id="name" placeholder="Nama Anda (Opsional)" style="width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:8px;">
+        <textarea id="message" placeholder="Tulis pertanyaan Anda di sini..." rows="4" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px; resize:none;"></textarea>
+        <div style="margin-top:5px; display:flex; gap:6px;">
+          <button type="button" onclick="formatText('bold')" style="padding:5px 8px;">𝐁</button>
+          <button type="button" onclick="formatText('italic')" style="padding:5px 8px;"><i>I</i></button>
+          <button type="button" onclick="formatText('underline')" style="padding:5px 8px;"><u>U</u></button>
+          <button type="button" onclick="insertBullet()" style="padding:5px 8px;">•</button>
+          <button type="button" onclick="clearFormat()" style="padding:5px 8px;">❌</button>
+        </div>
+        <button type="submit" style="background:#006241; color:white; border:none; padding:10px 20px; border-radius:25px; cursor:pointer; margin-top:10px;">Kirim</button>
+      </form>
+
+      <p id="status" style="margin-top:15px; color:#006241; font-weight:bold;"></p>
+      <hr style="margin:20px 0;">
+      <div id="commentsSection">
+        <p style="color:#999; font-size:13px;">Belum ada komentar, jadilah yang pertama!</p>
+      </div>
+    </div>
   </main>
 
-  <!-- === FOOTER BARU === -->
+  <!-- ====== FOOTER ====== -->
   <footer>
     <div class="footer-container">
-      <!-- Kolom Kiri -->
       <div class="footer-column">
         <h3>Bagaimana kami membantu anda?</h3>
         <p style="font-family: 'Gentium Basic', serif; font-size: 10px;">(Whatsapp only)</p>
@@ -122,35 +193,28 @@
         <p>Sonny Agung (0896-16161-1383)</p>
       </div>
 
-      <!-- Kolom Tengah -->
       <div class="footer-column">
-        <h3 style="font-family:'Times New Roman'; font-size:14px; font-weight:bold;">Email</h3>
+        <h3 style="font-family:'Times New Roman'; font-size:14px;">Email</h3>
         <ul>
           <li><a href="mailto:engineeringacssub@gmail.com">engineeringacssub@gmail.com</a></li>
           <li><a href="mailto:suballeng@aerowisatafood.com">suballeng@aerowisatafood.com</a></li>
         </ul>
-
-        <h3 style="margin-top:1rem; font-family:'Lora'; font-size:11px; font-weight:bold;">Ingin Magang Industri (PKL) di PT Aerofood ACS Surabaya?</h3>
+        <h3 style="margin-top:1rem; font-family:'Lora'; font-size:11px;">Ingin Magang Industri (PKL)?</h3>
         <p style="font-family:'Lora'; font-size:11px;">+62 823-3843-8588</p>
       </div>
 
-      <!-- Kolom Kanan -->
       <div class="footer-column">
-        <h3 style="font-family:'Lora'; font-size:11px; font-weight:bold;">Terhubung dengan Kami</h3>
+        <h3 style="font-family:'Lora'; font-size:11px;">Terhubung dengan Kami</h3>
         <p><a href="https://aerowisatafood.com/" target="_blank">https://aerowisatafood.com/</a></p>
-
-        <h3 style="margin-top:1rem; font-family:'Arial'; font-size:12px;">Jam Kerja: Senin - Jumat 08.00 - 17.00 WIB | Sabtu 08.00 - 12.00 WIB</h3>
+        <h3 style="margin-top:1rem; font-family:'Arial'; font-size:12px;">Jam Kerja: Senin–Jumat 08.00–17.00 WIB | Sabtu 08.00–12.00 WIB</h3>
       </div>
     </div>
-
-    <!-- Logo -->
     <div class="footer-logos">
-      <img src="D:\Downloads\PKL 2025 DAVID EVIN\logo-aerofood.png" alt="Logo Aerofood ACS">
-      <img src="D:\Downloads\PKL 2025 DAVID EVIN\logo-garuda.png" alt="Logo Garuda Indonesia">
+      <img src="assets/logo-aerofood.png" alt="Logo Aerofood ACS">
+      <img src="assets/logo-garuda.png" alt="Logo Garuda Indonesia">
     </div>
   </footer>
 
-  <!-- === BAGIAN ABU-ABU BAWAH === -->
   <div class="footer-bottom">
     <p>© 2025 PT Aerofood ACS Surabaya – Engineering & Housekeeping Division. All Rights Reserved.</p>
     <p>All materials on this site are confidential and intended only for internal documentation. Unauthorized copying or capture of content is prohibited.</p>
@@ -159,4 +223,5 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
 
