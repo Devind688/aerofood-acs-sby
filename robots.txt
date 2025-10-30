@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://devind688.github.io/aerofood-acs-sby/sitemap.xml
